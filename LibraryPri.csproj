@@ -1,0 +1,315 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{915CA358-CC7F-4435-8082-853E8544B08E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>LibraryPri</RootNamespace>
+    <AssemblyName>LibraryPri</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu.Licensing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=f89b4760ba7dcb6b" />
+    <Reference Include="Bunifu.UI.WinForms.BunifuGradientPanel">
+      <HintPath>..\..\Программирование\BunifuCrackV5-main\Bunifu.UI.WinForms.BunifuGradientPanel.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuImageButton">
+      <HintPath>..\..\Программирование\BunifuCrackV5-main\Bunifu.UI.WinForms.BunifuImageButton.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuPictureBox">
+      <HintPath>..\..\Программирование\BunifuCrackV5-main\Bunifu.UI.WinForms.BunifuPictureBox.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuScrollBar">
+      <HintPath>..\..\Программирование\BunifuCrackV5-main\Bunifu.UI.WinForms.BunifuScrollBar.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuTextBox">
+      <HintPath>..\..\Программирование\BunifuCrackV5-main\Bunifu.UI.WinForms.BunifuTextBox.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuToolTip">
+      <HintPath>..\..\Программирование\BunifuCrackV5-main\Bunifu.UI.WinForms.BunifuToolTip.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Office.Interop.Excel.15.0.4795.1001\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Author.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="bilet.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Books.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dbLibraryDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbLibraryDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dbLibraryDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbLibraryDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dbLibraryDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbLibraryDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dbLibraryDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbLibraryDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\RegistrationUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\RegistrationUsers.Designer.cs">
+      <DependentUpon>RegistrationUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\VhodUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\VhodUser.Designer.cs">
+      <DependentUpon>VhodUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\AccountReader.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\AccountReader.Designer.cs">
+      <DependentUpon>AccountReader.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\LibrarianAuthorization.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\LibrarianAuthorization.Designer.cs">
+      <DependentUpon>LibrarianAuthorization.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\LibrarianAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\LibrarianAccount.Designer.cs">
+      <DependentUpon>LibrarianAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\takeBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\takeBook.Designer.cs">
+      <DependentUpon>takeBook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\GiveBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\GiveBook.Designer.cs">
+      <DependentUpon>GiveBook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager.cs" />
+    <Compile Include="manInfo.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Form\RegistrationBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\RegistrationBook.Designer.cs">
+      <DependentUpon>RegistrationBook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagrams.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form\Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\RegistrationUsers.resx">
+      <DependentUpon>RegistrationUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\VhodUser.resx">
+      <DependentUpon>VhodUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\AccountReader.resx">
+      <DependentUpon>AccountReader.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\LibrarianAuthorization.resx">
+      <DependentUpon>LibrarianAuthorization.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\LibrarianAccount.resx">
+      <DependentUpon>LibrarianAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\takeBook.resx">
+      <DependentUpon>takeBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\GiveBook.resx">
+      <DependentUpon>GiveBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Form\RegistrationBook.resx">
+      <DependentUpon>RegistrationBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="dbLibraryDataSet.xsc">
+      <DependentUpon>dbLibraryDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="dbLibraryDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dbLibraryDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dbLibraryDataSet.xss">
+      <DependentUpon>dbLibraryDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="dbLibraryDataSet1.xsc">
+      <DependentUpon>dbLibraryDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="dbLibraryDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dbLibraryDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dbLibraryDataSet1.xss">
+      <DependentUpon>dbLibraryDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="dbLibraryDataSet2.xsc">
+      <DependentUpon>dbLibraryDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="dbLibraryDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dbLibraryDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dbLibraryDataSet2.xss">
+      <DependentUpon>dbLibraryDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="dbLibraryDataSet3.xsc">
+      <DependentUpon>dbLibraryDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="dbLibraryDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dbLibraryDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dbLibraryDataSet3.xss">
+      <DependentUpon>dbLibraryDataSet3.xsd</DependentUpon>
+    </None>
+    <EntityDeploy Include="Model.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Model.edmx.diagram">
+      <DependentUpon>Model.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\library.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\free-icon-cross-mark-7782775.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Model.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model.edmx</DependentUpon>
+      <LastGenOutput>Model.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Model.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model.edmx</DependentUpon>
+      <LastGenOutput>Model.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
