@@ -300,6 +300,7 @@
     <None Include="Resources\free-icon-cross-mark-7782775.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="dbQuery\script.sql" />
     <Content Include="Model.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Model.edmx</DependentUpon>
